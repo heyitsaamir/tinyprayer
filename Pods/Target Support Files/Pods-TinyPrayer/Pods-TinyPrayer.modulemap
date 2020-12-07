@@ -1,6 +1,0 @@
-framework module Pods_TinyPrayer {
-  umbrella header "Pods-TinyPrayer-umbrella.h"
-
-  export *
-  module * { export * }
-}
