@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "963A69C1-B374-4E0E-98CA-1BC7F081AACF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A90ACEC7-F0F2-4C90-BC65-35990E994CD3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinyPrayer/NibLoadable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "createFromNib(in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A90ACEC7-F0F2-4C90-BC65-35990E994CD3 - 7a9778bc906eb0d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static (extension in TinyPrayer):TinyPrayer.NibLoadable&lt; where A: __C.NSView&gt;.createFromNib(in: __C.NSBundle) -&gt; A"
+                  moduleName = "TinyPrayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ajawaid/Documents/workspace/TinyPrayer/TinyPrayer/NibLoadable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "869">
+               </Location>
+               <Location
+                  uuid = "A90ACEC7-F0F2-4C90-BC65-35990E994CD3 - d19e3785c4402779"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; Swift.Bool in static (extension in TinyPrayer):TinyPrayer.NibLoadable&lt; where A: __C.NSView&gt;.createFromNib(in: __C.NSBundle) -&gt; A"
+                  moduleName = "TinyPrayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ajawaid/Documents/workspace/TinyPrayer/TinyPrayer/NibLoadable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FD8EA3F-68E7-46AB-B8D3-27F8BB634C46"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinyPrayer/NibLoadable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "createFromNib(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
