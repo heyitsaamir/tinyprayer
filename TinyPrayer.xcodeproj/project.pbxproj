@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA43D156257DE8F3002ED130 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D155257DE8F3002ED130 /* Label.swift */; };
 		FAEC6C60257DA6B3002F8E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */; };
 		FAEC6C62257DA6B3002F8E75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C61257DA6B3002F8E75 /* ContentView.swift */; };
 		FAEC6C64257DA6B5002F8E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC6C63257DA6B5002F8E75 /* Assets.xcassets */; };
 		FAEC6C67257DA6B5002F8E75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC6C66257DA6B5002F8E75 /* Preview Assets.xcassets */; };
 		FAEC6C6A257DA6B5002F8E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC6C68257DA6B5002F8E75 /* Main.storyboard */; };
+		FAEC6C75257DCA69002F8E75 /* PrayerTimesListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC6C74257DCA69002F8E75 /* PrayerTimesListView.xib */; };
+		FAEC6C77257DCA8B002F8E75 /* PrayerTimeListMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C76257DCA8B002F8E75 /* PrayerTimeListMenuItem.swift */; };
+		FAEC6C79257DCF1E002F8E75 /* PrayerTimesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C78257DCF1E002F8E75 /* PrayerTimesListView.swift */; };
+		FAEC6C7C257DD5F7002F8E75 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C7B257DD5F7002F8E75 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA43D155257DE8F3002ED130 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		FAEC6C5C257DA6B3002F8E75 /* TinyPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEC6C61257DA6B3002F8E75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +29,10 @@
 		FAEC6C69257DA6B5002F8E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAEC6C6B257DA6B5002F8E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEC6C6C257DA6B5002F8E75 /* TinyPrayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyPrayer.entitlements; sourceTree = "<group>"; };
+		FAEC6C74257DCA69002F8E75 /* PrayerTimesListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTimesListView.xib; sourceTree = "<group>"; };
+		FAEC6C76257DCA8B002F8E75 /* PrayerTimeListMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeListMenuItem.swift; sourceTree = "<group>"; };
+		FAEC6C78257DCF1E002F8E75 /* PrayerTimesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesListView.swift; sourceTree = "<group>"; };
+		FAEC6C7B257DD5F7002F8E75 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 		FAEC6C5E257DA6B3002F8E75 /* TinyPrayer */ = {
 			isa = PBXGroup;
 			children = (
+				FAEC6C7A257DD5E3002F8E75 /* Protocols */,
 				FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */,
 				FAEC6C61257DA6B3002F8E75 /* ContentView.swift */,
 				FAEC6C63257DA6B5002F8E75 /* Assets.xcassets */,
@@ -62,6 +73,10 @@
 				FAEC6C6B257DA6B5002F8E75 /* Info.plist */,
 				FAEC6C6C257DA6B5002F8E75 /* TinyPrayer.entitlements */,
 				FAEC6C65257DA6B5002F8E75 /* Preview Content */,
+				FAEC6C76257DCA8B002F8E75 /* PrayerTimeListMenuItem.swift */,
+				FAEC6C74257DCA69002F8E75 /* PrayerTimesListView.xib */,
+				FAEC6C78257DCF1E002F8E75 /* PrayerTimesListView.swift */,
+				FA43D155257DE8F3002ED130 /* Label.swift */,
 			);
 			path = TinyPrayer;
 			sourceTree = "<group>";
@@ -72,6 +87,14 @@
 				FAEC6C66257DA6B5002F8E75 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAEC6C7A257DD5E3002F8E75 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC6C7B257DD5F7002F8E75 /* NibLoadable.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +158,7 @@
 				FAEC6C6A257DA6B5002F8E75 /* Main.storyboard in Resources */,
 				FAEC6C67257DA6B5002F8E75 /* Preview Assets.xcassets in Resources */,
 				FAEC6C64257DA6B5002F8E75 /* Assets.xcassets in Resources */,
+				FAEC6C75257DCA69002F8E75 /* PrayerTimesListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEC6C79257DCF1E002F8E75 /* PrayerTimesListView.swift in Sources */,
 				FAEC6C62257DA6B3002F8E75 /* ContentView.swift in Sources */,
+				FA43D156257DE8F3002ED130 /* Label.swift in Sources */,
+				FAEC6C77257DCA8B002F8E75 /* PrayerTimeListMenuItem.swift in Sources */,
+				FAEC6C7C257DD5F7002F8E75 /* NibLoadable.swift in Sources */,
 				FAEC6C60257DA6B3002F8E75 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
