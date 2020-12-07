@@ -26,13 +26,38 @@ class PrayerTimesListView: NSView, NibLoadable {
         
         
         gridView.addRow(with: [createLabel(with: "Fajr"), createLabel(with: "8:30")]);
+        gridView.addRow(with: [createSeparator(), createSeparator()]);
         gridView.addRow(with: [createLabel(with: "Fajr"), createLabel(with: "8:30")]);
+        gridView.addRow(with: [createSeparator(), createSeparator()]);
         gridView.addRow(with: [createLabel(with: "Fajr"), createLabel(with: "8:30")]);
+        gridView.addRow(with: [createSeparator(), createSeparator()]);
         gridView.addRow(with: [createLabel(with: "Fajr"), createLabel(with: "8:30")]);
+        gridView.addRow(with: [createSeparator(), createSeparator()]);
         gridView.addRow(with: [createLabel(with: "Fajr"), createLabel(with: "8:30")]);
+        gridView.addRow(with: [createSeparator(), createSeparator()]);
         gridView.addRow(with: [createLabel(with: "Fajr"), createLabel(with: "8:30")]);
     
         gridView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         gridView.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
+}
+
+func createSeparator() -> NSView {
+    let separator = Separator();
+    separator.translatesAutoresizingMaskIntoConstraints = false;
+    separator.heightAnchor.constraint(equalToConstant: 1).isActive = true;
+    
+    return separator;
+}
+
+class Separator: NSView {
+
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
+
+        // #1d161d
+        NSColor(red: 1, green:1, blue: 1, alpha: 0.4).setFill()
+        dirtyRect.fill()
+    }
+
 }

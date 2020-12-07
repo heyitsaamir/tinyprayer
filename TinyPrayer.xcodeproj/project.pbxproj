@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFB5A52AC8805AD8360A6FA9 /* Pods_TinyPrayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE76909AFBEC5FDC4608C68C /* Pods_TinyPrayer.framework */; };
 		FA43D156257DE8F3002ED130 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D155257DE8F3002ED130 /* Label.swift */; };
 		FAEC6C60257DA6B3002F8E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */; };
 		FAEC6C62257DA6B3002F8E75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C61257DA6B3002F8E75 /* ContentView.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12F0B5C86B753F7FB82D2568 /* Pods-TinyPrayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinyPrayer.release.xcconfig"; path = "Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer.release.xcconfig"; sourceTree = "<group>"; };
+		34AD2AB1FA6C7095398699D8 /* Pods-TinyPrayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinyPrayer.debug.xcconfig"; path = "Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer.debug.xcconfig"; sourceTree = "<group>"; };
+		BE76909AFBEC5FDC4608C68C /* Pods_TinyPrayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinyPrayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA43D155257DE8F3002ED130 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		FAEC6C5C257DA6B3002F8E75 /* TinyPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,17 +44,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB5A52AC8805AD8360A6FA9 /* Pods_TinyPrayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DAB6FFC61C30E142608BE37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34AD2AB1FA6C7095398699D8 /* Pods-TinyPrayer.debug.xcconfig */,
+				12F0B5C86B753F7FB82D2568 /* Pods-TinyPrayer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D56B6CC96B35D32ED824EC5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE76909AFBEC5FDC4608C68C /* Pods_TinyPrayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAEC6C53257DA6B3002F8E75 = {
 			isa = PBXGroup;
 			children = (
 				FAEC6C5E257DA6B3002F8E75 /* TinyPrayer */,
 				FAEC6C5D257DA6B3002F8E75 /* Products */,
+				2DAB6FFC61C30E142608BE37 /* Pods */,
+				D56B6CC96B35D32ED824EC5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEC6C6F257DA6B5002F8E75 /* Build configuration list for PBXNativeTarget "TinyPrayer" */;
 			buildPhases = (
+				3E61754DC94FB18EF1BACC38 /* [CP] Check Pods Manifest.lock */,
 				FAEC6C58257DA6B3002F8E75 /* Sources */,
 				FAEC6C59257DA6B3002F8E75 /* Frameworks */,
 				FAEC6C5A257DA6B3002F8E75 /* Resources */,
+				FD6447442F8FF94FC2E6B37B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +190,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E61754DC94FB18EF1BACC38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TinyPrayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6447442F8FF94FC2E6B37B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAEC6C58257DA6B3002F8E75 /* Sources */ = {
@@ -307,6 +376,7 @@
 		};
 		FAEC6C70257DA6B5002F8E75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34AD2AB1FA6C7095398699D8 /* Pods-TinyPrayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TinyPrayer/TinyPrayer.entitlements;
@@ -328,6 +398,7 @@
 		};
 		FAEC6C71257DA6B5002F8E75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12F0B5C86B753F7FB82D2568 /* Pods-TinyPrayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TinyPrayer/TinyPrayer.entitlements;
