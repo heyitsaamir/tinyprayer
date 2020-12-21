@@ -14,6 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
     var statusBarItem: NSStatusItem!;
+    
+    var controller = PrayerController();
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let statusBar = NSStatusBar.system;
@@ -28,6 +30,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             withTitle: "Cancel burrito order",
             action: #selector(AppDelegate.cancelBurritoOrder),
             keyEquivalent: "")
+        
+        controller.sync {
+            print("Done!");
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

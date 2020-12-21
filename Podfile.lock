@@ -2,15 +2,15 @@ PODS:
   - Networking (5.1.0)
 
 DEPENDENCIES:
-  - Networking (~> 5.1)
+  - Networking
 
 SPEC REPOS:
-  https://cdn.cocoapods.org/:
+  trunk:
     - Networking
 
 SPEC CHECKSUMS:
   Networking: 85b2a0c2d3b6eb548f4eec9880f5f3c49e6b0959
 
-PODFILE CHECKSUM: 29a9e2d16fcd9c6e4486f3f3b6a8104e1f0b7096
+PODFILE CHECKSUM: 801dd471e215f09e633add343e8bf714001d1da0
 
 COCOAPODS: 1.10.0

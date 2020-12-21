@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EFB5A52AC8805AD8360A6FA9 /* Pods_TinyPrayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE76909AFBEC5FDC4608C68C /* Pods_TinyPrayer.framework */; };
 		FA43D156257DE8F3002ED130 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D155257DE8F3002ED130 /* Label.swift */; };
+		FA8E2AD5258E9914005CF3A1 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E2AD4258E9914005CF3A1 /* Prayer.swift */; };
+		FA8E2AE0258EA273005CF3A1 /* PrayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E2ADF258EA273005CF3A1 /* PrayerController.swift */; };
+		FA8E2AEB25905441005CF3A1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E2AEA25905441005CF3A1 /* Date.swift */; };
 		FAEC6C60257DA6B3002F8E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */; };
 		FAEC6C62257DA6B3002F8E75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC6C61257DA6B3002F8E75 /* ContentView.swift */; };
 		FAEC6C64257DA6B5002F8E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC6C63257DA6B5002F8E75 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 		34AD2AB1FA6C7095398699D8 /* Pods-TinyPrayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinyPrayer.debug.xcconfig"; path = "Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer.debug.xcconfig"; sourceTree = "<group>"; };
 		BE76909AFBEC5FDC4608C68C /* Pods_TinyPrayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinyPrayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA43D155257DE8F3002ED130 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		FA8E2AD4258E9914005CF3A1 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
+		FA8E2ADF258EA273005CF3A1 /* PrayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerController.swift; sourceTree = "<group>"; };
+		FA8E2AEA25905441005CF3A1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		FAEC6C5C257DA6B3002F8E75 /* TinyPrayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyPrayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEC6C61257DA6B3002F8E75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,7 +63,6 @@
 				34AD2AB1FA6C7095398699D8 /* Pods-TinyPrayer.debug.xcconfig */,
 				12F0B5C86B753F7FB82D2568 /* Pods-TinyPrayer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -67,6 +72,22 @@
 				BE76909AFBEC5FDC4608C68C /* Pods_TinyPrayer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA8E2AD3258E9905005CF3A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E2AD4258E9914005CF3A1 /* Prayer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA8E2AE92590541E005CF3A1 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E2AEA25905441005CF3A1 /* Date.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		FAEC6C53257DA6B3002F8E75 = {
@@ -90,6 +111,8 @@
 		FAEC6C5E257DA6B3002F8E75 /* TinyPrayer */ = {
 			isa = PBXGroup;
 			children = (
+				FA8E2AE92590541E005CF3A1 /* extensions */,
+				FA8E2AD3258E9905005CF3A1 /* Model */,
 				FAEC6C7A257DD5E3002F8E75 /* Protocols */,
 				FAEC6C5F257DA6B3002F8E75 /* AppDelegate.swift */,
 				FAEC6C61257DA6B3002F8E75 /* ContentView.swift */,
@@ -102,6 +125,7 @@
 				FAEC6C74257DCA69002F8E75 /* PrayerTimesListView.xib */,
 				FAEC6C78257DCF1E002F8E75 /* PrayerTimesListView.swift */,
 				FA43D155257DE8F3002ED130 /* Label.swift */,
+				FA8E2ADF258EA273005CF3A1 /* PrayerController.swift */,
 			);
 			path = TinyPrayer;
 			sourceTree = "<group>";
@@ -133,7 +157,7 @@
 				FAEC6C58257DA6B3002F8E75 /* Sources */,
 				FAEC6C59257DA6B3002F8E75 /* Frameworks */,
 				FAEC6C5A257DA6B3002F8E75 /* Resources */,
-				FD6447442F8FF94FC2E6B37B /* [CP] Embed Pods Frameworks */,
+				2AC6962B469C22CAA2D7146A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +216,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2AC6962B469C22CAA2D7146A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3E61754DC94FB18EF1BACC38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,23 +255,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD6447442F8FF94FC2E6B37B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinyPrayer/Pods-TinyPrayer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -242,8 +266,11 @@
 				FAEC6C62257DA6B3002F8E75 /* ContentView.swift in Sources */,
 				FA43D156257DE8F3002ED130 /* Label.swift in Sources */,
 				FAEC6C77257DCA8B002F8E75 /* PrayerTimeListMenuItem.swift in Sources */,
+				FA8E2AE0258EA273005CF3A1 /* PrayerController.swift in Sources */,
 				FAEC6C7C257DD5F7002F8E75 /* NibLoadable.swift in Sources */,
 				FAEC6C60257DA6B3002F8E75 /* AppDelegate.swift in Sources */,
+				FA8E2AEB25905441005CF3A1 /* Date.swift in Sources */,
+				FA8E2AD5258E9914005CF3A1 /* Prayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

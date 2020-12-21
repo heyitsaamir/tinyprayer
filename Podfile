@@ -6,5 +6,5 @@ target 'TinyPrayer' do
   use_frameworks!
 
   # Pods for TinyPrayer
-  pod 'Networking', '~> 5.1'
+  pod 'Networking'
 end
