@@ -12,20 +12,26 @@ import Networking
 class PrayerController {
     private let networking = Networking(baseURL: "http://api.aladhan.com");
     
-    func sync(onCompletion: @escaping () -> Void) -> Void {
+    func sync(onCompletion: @escaping (_ prayerTimes: PrayerTimes?) -> Void) -> Void {
         self.makeRequest { (response, error) in
             guard let response = response else {
                 guard let error = error else {
                     print("Unknown error");
-                    onCompletion();
+                    onCompletion(nil);
                     return;
                 }
                 print(error.localizedDescription);
-                onCompletion();
+                onCompletion(nil);
                 return;
             }
             
-            onCompletion();
+            if let todaysPrayerTimes = response.data.first(where: { (data) -> Bool in
+                return Calendar.current.isDateInToday(data.date.gregorian.date)
+            }) {
+                onCompletion(todaysPrayerTimes.timings);
+            } else {
+                onCompletion(nil)
+            }
         }
     }
     
@@ -34,7 +40,6 @@ class PrayerController {
             switch result {
             case .success(let response):
                 do {
-                    print(response.dictionaryBody.debugDescription);
                     let prayerResponse = try JSONDecoder().decode(PrayerResponse.self, from: response.data)
                     onCompletion(prayerResponse, nil)
                 } catch(let error) {

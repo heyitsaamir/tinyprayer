@@ -15,6 +15,7 @@ struct PrayerResponse: Decodable {
             struct DateInfo: Decodable {
                 let date: Date
                 let format: String
+                let dateString: String
                 
                 private enum CodingKeys: String, CodingKey {
                     case date
@@ -25,7 +26,7 @@ struct PrayerResponse: Decodable {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
                     
                     format = try container.decode(String.self, forKey: .format).replacingOccurrences(of: "D", with: "d").replacingOccurrences(of: "Y", with: "y")
-                    let dateString = try container.decode(String.self, forKey: .date)
+                    dateString = try container.decode(String.self, forKey: .date)
                     let formatter = DateFormatter()
                     formatter.dateFormat = format
                     formatter.calendar = Calendar(identifier: .iso8601)
@@ -60,7 +61,7 @@ struct PrayerResponse: Decodable {
             let imsak: Date
             let midnight: Date
             
-            private enum CodingKeys: String, CodingKey {
+            public enum PrayerTypes: String, CodingKey, Hashable {
                 case fajr = "Fajr"
                 case sunrise = "Sunrise"
                 case dhuhr = "Dhuhr"
@@ -71,6 +72,8 @@ struct PrayerResponse: Decodable {
                 case imsak = "Imsak"
                 case midnight = "Midnight"
             }
+            
+            private typealias CodingKeys = PrayerTypes
             
             init(from decoder: Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -107,3 +110,6 @@ struct PrayerResponse: Decodable {
     let status: String
     let data: [PrayerResponseData]
 }
+
+typealias PrayerTimes = PrayerResponse.PrayerResponseData.TimingsForDay
+typealias InterestingPrayerType = PrayerResponse.PrayerResponseData.TimingsForDay.PrayerTypes

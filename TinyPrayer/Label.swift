@@ -9,8 +9,7 @@
 import SwiftUI
 
 func createLabel(with text: String) -> NSTextField {
-    let label = NSTextField()
-    label.stringValue = text
+    let label = NSTextField(labelWithString: text)
     label.textColor = .white
     label.backgroundColor = .clear
     label.isBezeled = false

@@ -11,42 +11,45 @@ import SwiftUI
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    var window: NSWindow!
-    var statusBarItem: NSStatusItem!;
     
-    var controller = PrayerController();
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let statusBar = NSStatusBar.system;
-        statusBarItem = statusBar.statusItem(
-        withLength: NSStatusItem.squareLength)
+    var window: NSWindow!
+    let popover = NSPopover()
+    var statusBarItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength);
+    
+    func applicationWillFinishLaunching(_ notification: Notification) {
         statusBarItem.button?.title = "🕋"
-        let statusBarMenu = NSMenu(title: "Cap Status Bar Menu")
-        statusBarItem.menu = statusBarMenu;
-        statusBarMenu.addItem(PrayerTimesListMenuItem(title: "foo", action: #selector(AppDelegate.orderABurrito), keyEquivalent: ""));
-
-        statusBarMenu.addItem(
-            withTitle: "Cancel burrito order",
-            action: #selector(AppDelegate.cancelBurritoOrder),
-            keyEquivalent: "")
-        
-        controller.sync {
-            print("Done!");
+        statusBarItem.button?.action = #selector(AppDelegate.togglePopover(_:))
+        self.popover.animates = false
+        self.popover.behavior = .transient
+        popover.contentViewController = PrayerTimesViewController(statusItem: statusBarItem)
+    }
+    
+    @objc func togglePopover(_ sender: NSStatusItem) {
+        if self.popover.isShown {
+            closePopover(sender: sender)
+        }
+        else {
+            showPopover(sender: sender)
         }
     }
-
+    
+    func showPopover(sender: Any?) {
+        if let button = self.statusBarItem.button {
+            NSApplication.shared.activate(ignoringOtherApps: true)
+            self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+        }
+    }
+    
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    }
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
-    @objc func orderABurrito() {
-        print("Ordering a burrito!")
-    }
-
-    @objc func cancelBurritoOrder() {
-        print("Canceling your order :(")
+    
+    
+    func closePopover(sender: Any?)  {
+        self.popover.performClose(sender)
     }
 }
 
